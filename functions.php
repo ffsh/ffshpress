@@ -8,15 +8,23 @@ function grotaxblog_enqueue_styles() {
 
 function grotaxblog_enqueue_scripts() {
     $dependencies = array('jquery');
-    wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '3.3.6', true );
+    wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', $dependencies, '4.1.3', true );
 }
 
 function grotaxblog_wp_setup() {
     add_theme_support( 'title-tag' );
 }
 
+function grotaxblog_register_menu() {
+    register_nav_menu('header-menu', __( 'Header Menu' ));
+}
+
+
 add_action( 'wp_enqueue_scripts', 'grotaxblog_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'grotaxblog_enqueue_scripts' );
 add_action( 'after_setup_theme', 'grotaxblog_wp_setup' );
+add_action( 'init', 'grotaxblog_register_menu' );
 
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+require_once('wp_bootstrap_pagination.php');
 ?>

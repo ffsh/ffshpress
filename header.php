@@ -9,23 +9,36 @@
 
 <body <?php body_class(); ?>>
 
-<div class="blog-masthead">
-    <div class="container-fluid">
-        <nav class="blog-nav">
-            <a class="blog-nav-item active" href="#">Home</a>
-            <a class="blog-nav-item" href="#">New features</a>
-            <a class="blog-nav-item" href="#">Press</a>
-            <a class="blog-nav-item" href="#">New hires</a>
-            <a class="blog-nav-item" href="#">About</a>
-        </nav>
-    </div>
+    <div class="blog-masthead">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+          <a class="navbar-brand" href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <?php /* Primary navigation */
+              wp_nav_menu( array(
+                  'menu' => 'top_menu',
+                  'depth' => 2,
+                  'container' => false,
+                  'menu_class' => 'nav',
+                  'walker' => new wp_bootstrap_navwalker())
+            );
+          ?>
+      </ul>
+      <?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
+      <form class="form-inline my-2 my-lg-0" role="form" action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
+          <input class="form-control mr-sm-2" id="s" name="s" type="search" placeholder="Search" aria-label="Search"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+  </div>
+</nav>
 </div>
 
-<div class="container">
-
-    <div class="blog-header">
-        <h1 class="blog-title">The Bootstrap Blog</h1>
-        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
-    </div>
+<div class="blog-container">
 
     <div class="row">
