@@ -43,6 +43,10 @@ Text Domain: grotaxblog
 
 pre {
     background-color: #c4c4c4;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 .blog-container {
@@ -54,7 +58,7 @@ pre {
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #555;
 }
 
@@ -161,26 +165,16 @@ h6, .h6 {
 }
 
 
-/* Pagination
-
-.pager {
-  margin-bottom: 60px;
-  text-align: left;
-}
-.pager > li > a {
-  width: 140px;
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 30px;
-}*/
-
-
 /*
  * Blog posts
  */
 
 .blog-post {
-  margin-bottom: 60px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  color: #363636;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .blog-post-title {
   margin-bottom: 5px;

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="col-sm-8 blog-main">
+<div class="col-sm-10 blog-main">
 
  <?php
  if ( have_posts() ) {
