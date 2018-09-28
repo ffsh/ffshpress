@@ -30,9 +30,9 @@
             );
           ?>
       </ul>
-      <?php $search_terms = htmlspecialchars( $_GET["s"] ); ?>
-      <form class="form-inline my-2 my-lg-0" role="form" action="<?php bloginfo('siteurl'); ?>/" id="searchform" method="get">
-          <input class="form-control mr-sm-2" id="s" name="s" type="search" placeholder="Search" aria-label="Search"<?php if ( $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
+      <?php if(isset($_GET["s"])){ $search_terms = htmlspecialchars( $_GET["s"] );} ?>
+      <form class="form-inline my-2 my-lg-0" role="form" action="<?php bloginfo('url'); ?>/" id="searchform" method="get">
+          <input class="form-control mr-sm-2" id="s" name="s" type="search" placeholder="Search" aria-label="Search"<?php if ( isset($search_terms) && $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
   </div>

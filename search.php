@@ -19,7 +19,7 @@
 
             <?php else : // No Results ?>
 
-                <p><?php _e('Sorry. We couldn&rsquo;t find anything for that search. View one of our site&rsquo;s pages or a recent article below.'); ?></p>
+                <p><?php _e('Sorry'); ?></p>
                 <div class="row">
                     <div class="col-md-6 posts">
                         <h3><?php _e('Recent Articles'); ?></h3>

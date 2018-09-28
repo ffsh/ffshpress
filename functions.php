@@ -13,12 +13,12 @@ function ffshpress_enqueue_scripts() {
 
 function ffshpress_wp_setup() {
     add_theme_support( 'title-tag' );
+    load_theme_textdomain( 'ffshpress', get_template_directory() . '/languages' );
 }
 
 function ffshpress_register_menu() {
     register_nav_menu('header-menu', __( 'Header Menu' ));
 }
-
 
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_scripts' );
