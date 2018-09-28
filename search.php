@@ -5,6 +5,7 @@
             <?php if (have_posts()) : // Results Found ?>
 
                 <h1><?php _e('Search Results'); ?></h1>
+                <hr>
                 <?php while (have_posts()) : the_post(); ?>
 
                 <article <?php post_class(); ?>>
