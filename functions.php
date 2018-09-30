@@ -20,11 +20,29 @@ function ffshpress_register_menu() {
     register_nav_menu('header-menu', __( 'Header Menu' ));
 }
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'Home right sidebar',
+        'id'            => 'home_right_1',
+        'before_widget' => '<div class="sidebar-module-inset">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="rounded">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_scripts' );
 add_action( 'after_setup_theme', 'ffshpress_wp_setup' );
 add_action( 'init', 'ffshpress_register_menu' );
+add_action( 'widgets_init', 'arphabet_widgets_init' );
 
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-require_once('wp_bootstrap_pagination.php');
+require_once('lib/class-wp-bootstrap-navwalker.php');
+require_once('lib/wp_bootstrap_pagination.php');
 ?>

@@ -18,7 +18,7 @@
   </div>
   <div class="blog-masthead">
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md">
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,15 +33,9 @@
               'walker' => new wp_bootstrap_navwalker())
             );
         ?>
-  <?php if(isset($_GET["s"])){ $search_terms = htmlspecialchars( $_GET["s"] );} ?>
-  <form class="form-inline my-2 my-lg-0" role="form" action="<?php bloginfo('url'); ?>/" id="searchform" method="get">
-      <input class="form-control mr-sm-2" id="s" name="s" type="search" placeholder="Search" aria-label="Search"<?php if ( isset($search_terms) && $search_terms !== '' ) { echo ' value="' . $search_terms . '"'; } ?> />
-      <button class="btn my-2 my-sm-0" type="submit">Search</button>
-  </form>
 </div>
 </nav>
 </div>
 
-<div class="blog-container">
+<div class="container-fluid blog-container">
 
-    <div class="row">

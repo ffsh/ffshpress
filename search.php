@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-<div class="container" id="main">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-12 col-lg-12 col-xl-7 search-result-list">
             <?php if (have_posts()) : // Results Found ?>
 
                 <h1><?php _e('Search Results'); ?></h1>
@@ -46,9 +45,16 @@
                 </div> <!-- .row -->
 
             <?php endif; ?>
-
         </div> <!-- .col-md-8 -->
+        <?php get_sidebar(); ?>
+</div> <!-- .row -->
 
-    </div> <!-- .row -->
-</div><!-- .container -->
+<div class="pager mx-auto">
+<?php
+if ( function_exists('wp_bootstrap_pagination') ){
+    wp_bootstrap_pagination();
+}
+
+?>
+</div>
 <?php get_footer(); ?>

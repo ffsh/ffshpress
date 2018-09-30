@@ -36,8 +36,6 @@ Text Domain: ffshpress
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
     }
 }
 
@@ -54,12 +52,11 @@ pre {
     padding-right: 15px;
     padding-left: 15px;
     margin-top: 10px;
-    margin-right: 5%;
-    margin-left: 5%;
 }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f0f3f5;
 }
 
 h1, .h1,
@@ -179,7 +176,7 @@ h6, .h6 {
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;
-  margin: 0 -15px 15px;
+  margin: 0;
 }
 .sidebar-module-inset {
   padding: 15px;
@@ -203,6 +200,7 @@ h6, .h6 {
   color: #363636;
   padding-left: 10px;
   padding-right: 10px;
+  border: 1px solid;
 }
 .blog-post-title {
   margin-bottom: 5px;
@@ -212,6 +210,17 @@ h6, .h6 {
   color: #999;
 }
 
+.pager{
+  margin-top: 10px;
+}
+
+
+.search-result-list{
+  background-color: white;
+  border: 1px solid;
+  margin-top: 20px;
+  margin-left: 5px;
+}
 
 /*
  * Footer
