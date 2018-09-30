@@ -36,9 +36,14 @@ function arphabet_widgets_init() {
     ) );
 
 }
+function include_dashicons_font(){
+    wp_enqueue_style('dashicons');
+}
+
 
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_styles' );
 add_action( 'wp_enqueue_scripts', 'ffshpress_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'include_dashicons_font', 100 );
 add_action( 'after_setup_theme', 'ffshpress_wp_setup' );
 add_action( 'init', 'ffshpress_register_menu' );
 add_action( 'widgets_init', 'arphabet_widgets_init' );

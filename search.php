@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="row">
-        <div class="col-sm-12 col-lg-12 col-xl-7 search-result-list">
+        <div class="col-sm-12 col-lg-12 col-xl-8 search-result-list">
             <?php if (have_posts()) : // Results Found ?>
 
                 <h1><?php _e('Search Results'); ?></h1>
