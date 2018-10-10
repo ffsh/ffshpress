@@ -27,6 +27,7 @@
         <?php /* Primary navigation */
           wp_nav_menu( array(
               'menu' => 'header-menu',
+              'theme_location' => 'header-menu',
               'depth' => 2,
               'container' => false,
               'menu_class' => 'navbar-nav mr-auto',

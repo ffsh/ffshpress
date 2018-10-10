@@ -17,7 +17,12 @@ function ffshpress_wp_setup() {
 }
 
 function ffshpress_register_menu() {
-    register_nav_menu('header-menu', __( 'Header Menu' ));
+     register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'footer-menu' => __( 'Footer Menu' )
+    )
+  );
 }
 
 /**
