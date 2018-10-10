@@ -10,6 +10,19 @@
             <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
             <hr>
             <?php the_content(); ?>
+            <hr>
+            <div class="blog-post-tags">
+              <ul class="list-inline">
+                <?php
+                  $posttags = get_the_tags();
+                  if ($posttags) {
+                    foreach($posttags as $tag) {
+                      echo '<li class="list-inline-item blog-post-tag"><a href="'.get_tag_link($tag->id).'">'.$tag->name.'</a></li>';
+                    }
+                  }
+                ?>
+              </ul>
+            </div>
         </div><!-- /.blog-post -->
         <?php
             endwhile;

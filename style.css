@@ -200,15 +200,31 @@ h6, .h6 {
   color: #363636;
   padding-left: 10px;
   padding-right: 10px;
-  border: 1px solid;
+
 }
-.blog-post-title {
+.blog-post-title a{
   margin-bottom: 5px;
   font-size: 40px;
+  text-decoration: none;
+  color: black;
 }
 .blog-post-meta {
   color: #999;
 }
+.blog-post-tags {
+  padding: 5px;
+}
+.blog-post-tag{
+  background-color: #009ee0;
+  border-radius: 5px;
+
+}
+.blog-post-tag a{
+  font-size: 1em;
+  padding: 5px;
+  color: white;
+}
+
 
 .pager{
   margin-top: 10px;
@@ -230,7 +246,7 @@ h6, .h6 {
   padding: 40px 0;
   color: #999;
   text-align: center;
-  background-color: white;
+  background-color: #ffb400;
   border-top: 1px solid #e5e5e5;
 }
 .blog-footer p:last-child {

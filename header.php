@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <?php /* Primary navigation */
           wp_nav_menu( array(
-              'menu' => 'top_menu',
+              'menu' => 'header-menu',
               'depth' => 2,
               'container' => false,
               'menu_class' => 'navbar-nav mr-auto',
