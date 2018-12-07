@@ -6,9 +6,11 @@
         while ( have_posts() ) : the_post();
            ?>
            <div class="blog-post">
-            <h2 class="blog-post-title"><a href=<?php echo get_the_permalink()?>><?php the_title(); ?></a></h2>
-            <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
-            <hr>
+            <div class="blog-post-header">
+              <h2 class="blog-post-title"><a href=<?php echo get_the_permalink()?>><?php the_title(); ?></a></h2>
+                <p class="blog-post-meta"><?php the_date(); ?> by <?php the_author(); ?></p>
+              <hr>
+            </div>
             <?php the_content(); ?>
             <hr>
             <div class="blog-post-tags">
